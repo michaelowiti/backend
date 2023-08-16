@@ -5,7 +5,7 @@ const cors = require("cors")
 const usersRouter = require("./routes/users/user.routes")
 const authRouter = require("./routes/auth/auth.routes")
 
-const verifyToken = require("./routes/auth/verifyToken")
+const verifyToken = require("./middleware/verify")
 
 const api = express()
 

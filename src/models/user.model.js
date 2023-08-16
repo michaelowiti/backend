@@ -6,7 +6,7 @@ async function createUser({ firstName, lastName, email, password }) {
 }
 
 async function getUser(query) {
-  const user = await User.findOne(query)
+  const user = await User.findOne(query, "-_v")
   return user
 }
 

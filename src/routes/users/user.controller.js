@@ -2,8 +2,10 @@ const {getUser} = require('../../models/user.model')
 
 async function httpGetUser(req, res) {
   const { id } = req.user
-  const user = await getUser({id})
+  const user = await getUser({_id: id})
+
   delete user.password
+
   return res.status(200).send({user})
 }
 
